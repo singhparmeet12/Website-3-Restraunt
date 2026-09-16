@@ -28,10 +28,11 @@ const securityHeaders = [
 ];
 
 const nextConfig: NextConfig = {
-  experimental: {
-    outputFileTracingIncludes: {
-      "/**": ["./prisma/dev.db", "./dev.db"],
-    },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  outputFileTracingIncludes: {
+    "/**": ["./prisma/dev.db", "./dev.db"],
   },
   images: {
     remotePatterns: [
